@@ -1,0 +1,27 @@
+server:
+  port: 8888
+spring:
+  servlet:
+    multipart:                    # multipart/form-data，表单上传二进制文件
+      max-file-size: 10MB
+      max-request-size: 10MB
+  #minio配置
+  minio:
+    access-key: dAMaxkWaXUD1CV1JHbqw
+    secret-key: AXt3SD0JFkDENFbMeJKOOQb5wj8KvabZWu33Rs84
+    url: http://192.168.18.14:9090  #访问地址
+    bucket-name: wanghui
+
+  # es 7.17
+#  elasticsearch:
+#    uris: http://localhost:9200
+#    connection-timeout: 1s
+  # es 7.6.2
+  elasticsearch:
+    rest:
+      uris: http://localhost:9200
+      connection-timeout: 1s
+      read-timeout: 30s
+
+
+

@@ -1,0 +1,10 @@
+{"index": {"_index": "student_index", "_id": 71}}
+{"id": 71, "name": "牛1", "desc": "牛1弹钢琴", "data": "132145647", "age": 17}
+{"index": {"_index": "student_index", "_id": 72}}
+{"id": 72, "name": "牛2", "desc": "牛2不弹钢琴，弹吉他", "data": "148148", "age": 27}
+{"index": {"_index": "student_index", "_id": 73}}
+{"id": 73, "name": "牛3", "desc": "牛3弹钢琴，弹吉他", "data": "5959", "age": 37}
+{"index": {"_index": "student_index", "_id": "74"}}
+{"id": 74, "name": "牛4", "desc": "牛4弹钢琴，弹吉他，唱歌", "data": "4654", "age": 47}
+{"index": {"_index": "student_index"}}
+{"id": 75, "name": "牛5", "desc": "牛5弹钢琴，弹吉他，乐队主唱，弹键盘", "data": "15616", "age": 57}
