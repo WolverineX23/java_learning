@@ -12,6 +12,7 @@
         <module>ms-algorithm</module>
         <module>ms-java-base</module>
         <module>ms-tech-hotchpotch</module>
+        <module>ms-message-server</module>
     </modules>
 
     <properties>

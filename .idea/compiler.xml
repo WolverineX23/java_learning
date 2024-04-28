@@ -9,6 +9,7 @@
         <module name="ms-tech-hotchpotch" />
         <module name="ms-algorithm" />
         <module name="ms-java-base" />
+        <module name="ms-message-server" />
       </profile>
     </annotationProcessing>
   </component>
