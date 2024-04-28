@@ -17,6 +17,69 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+
+        <spring-boot-version>2.3.5.RELEASE</spring-boot-version>
+        <lombok-version>1.18.12</lombok-version>
+        <fastjson2-version>2.0.23</fastjson2-version>
+        <guava-version>30.0-jre</guava-version>
+        <minio-version>8.2.2</minio-version>
+        <es-client-version>7.6.2</es-client-version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <!--<version>2.7.7</version>-->
+                <version>${spring-boot-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.minio</groupId>
+                <artifactId>minio</artifactId>
+                <version>${minio-version}</version>
+            </dependency>
+
+            <!-- 封装了 spring-data-elasticsearch 包，其又分装了 elasticsearch-rest-high-level-client 包， 可直接使用 高级客户端 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+                <!--<version>2.7.7</version>-->
+                <version>${spring-boot-version}</version>
+            </dependency>
+
+            <!-- ES 高级客户端 - 对应 springboot 2.3.5.RELEASE -->
+            <!-- 若仅使用该包，将导致 spring data 的许多高层封装操作无法使用，编码更麻烦，
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                <version>${es-client-version}</version>
+            </dependency>
+            -->
+        </dependencies>
+    </dependencyManagement>
 </project>
