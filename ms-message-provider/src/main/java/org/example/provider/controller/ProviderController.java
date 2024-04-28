@@ -1,6 +1,6 @@
 package org.example.provider.controller;
 
-import org.example.provider.entity.Student;
+import org.example.commons.pojo.Student;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
