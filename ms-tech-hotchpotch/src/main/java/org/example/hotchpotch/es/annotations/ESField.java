@@ -1,7 +1,8 @@
 package org.example.hotchpotch.es.annotations;
 
-import org.example.es.enums.AnalyzerEnum;
-import org.example.es.enums.ESFieldEnum;
+
+import org.example.hotchpotch.es.enums.AnalyzerEnum;
+import org.example.hotchpotch.es.enums.ESFieldEnum;
 
 import java.lang.annotation.*;
 

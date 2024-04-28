@@ -6,7 +6,7 @@ import io.minio.errors.*;
 import io.minio.http.Method;
 import lombok.SneakyThrows;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
-import org.example.minio.config.MinioConfig;
+import org.example.hotchpotch.minio.config.MinioConfig;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

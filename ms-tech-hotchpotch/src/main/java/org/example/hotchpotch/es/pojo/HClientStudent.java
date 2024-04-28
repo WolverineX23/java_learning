@@ -4,9 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
-import org.example.es.annotations.ESField;
-import org.example.es.enums.AnalyzerEnum;
-import org.example.es.enums.ESFieldEnum;
+import org.example.hotchpotch.es.annotations.ESField;
+import org.example.hotchpotch.es.enums.AnalyzerEnum;
+import org.example.hotchpotch.es.enums.ESFieldEnum;
 
 import java.io.Serializable;
 

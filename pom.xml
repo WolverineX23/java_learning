@@ -12,7 +12,7 @@
         <module>ms-algorithm</module>
         <module>ms-java-base</module>
         <module>ms-tech-hotchpotch</module>
-        <module>ms-message-server</module>
+        <module>ms-message-provider</module>
     </modules>
 
     <properties>
@@ -25,6 +25,7 @@
         <guava-version>30.0-jre</guava-version>
         <minio-version>8.2.2</minio-version>
         <es-client-version>7.6.2</es-client-version>
+        <!--<spring-rabbit-version>3.1.4</spring-rabbit-version>-->
     </properties>
 
     <dependencyManagement>
@@ -81,6 +82,14 @@
                 <version>${es-client-version}</version>
             </dependency>
             -->
+
+            <!-- rabbitMQ including spring-rabbit and spring-messaging -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-amqp</artifactId>
+                <version>${spring-boot-version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>
