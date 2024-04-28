@@ -13,6 +13,8 @@
         <module>ms-java-base</module>
         <module>ms-tech-hotchpotch</module>
         <module>ms-message-provider</module>
+        <module>ms-message-consumer</module>
+        <module>commons</module>
     </modules>
 
     <properties>

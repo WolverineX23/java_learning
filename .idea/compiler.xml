@@ -10,6 +10,8 @@
         <module name="ms-algorithm" />
         <module name="ms-java-base" />
         <module name="ms-message-provider" />
+        <module name="ms-message-consumer" />
+        <module name="commons" />
       </profile>
     </annotationProcessing>
   </component>

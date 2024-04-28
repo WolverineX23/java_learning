@@ -1,4 +1,4 @@
-package org.example.provider.entity;
+package org.example.commons.pojo;
 
 
 import lombok.AllArgsConstructor;
