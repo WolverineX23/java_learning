@@ -1,6 +1,8 @@
 package org.example.consumer.listener;
 
-import com.rabbitmq.client.AMQP;
+import com.rabbitmq.client.Channel;
+import org.example.commons.pojo.OrderEntity;
+import org.example.commons.pojo.OrderItemEntity;
 import org.example.commons.pojo.Student;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageProperties;
@@ -15,12 +17,40 @@ import java.util.Arrays;
  * 消费者1号：用于消费队列中消息
  *
  */
-@Component
-@RabbitListener(queues = {"TestDirectQueue"})       // 监听的队列列表
+//@Component
+//@RabbitListener(queues = {"TestDirectQueue"})       // 监听的队列列表
 // @RabbitListener(queues = "TestDirectQueue")      // 若单个队列，可省略{}
 public class DirectConsumerListener {
 
-    //
+//    @RabbitHandler
+    public void receiveMsg(OrderEntity message) {
+
+        System.out.println("接收到消息：" + message);
+    }
+
+//    @RabbitHandler
+    public void receiveMsg(OrderItemEntity message) {
+
+        System.out.println("接收到消息2：" + message);
+    }
+
+    /* 该方法不可行，会将消息传到 私信队列
+    @RabbitHandler
+    public void receiveMsg(Message message,
+                           OrderEntity content,
+                           Channel channel) {
+
+        System.out.println("接收到消息...内容：" + message + "===>对象：" + content);
+    }
+
+    @RabbitHandler
+    public void receiveMsg2(Message message,
+                           OrderItemEntity content,
+                           Channel channel) {
+
+        System.out.println("接收到消息...内容：" + message + "===>对象：" + content);
+    }
+     */
 
     /**
      * Object 类型： 可接收所有类型的消息，如 String、jdk 默认序列化的 Student 对象、 JSON 序列化的 Student 对象...
@@ -28,8 +58,10 @@ public class DirectConsumerListener {
      *
      * @param msg
      */
-    @RabbitHandler
-    public void process(Student msg) {
+//    @RabbitHandler
+    public void process(Student msg) throws InterruptedException {
+
+        Thread.sleep(3000);     // 模拟业务执行
         System.out.println("Direct Consumer - 1 get msg: " + msg);
     }
 
@@ -42,9 +74,8 @@ public class DirectConsumerListener {
      * @param content
      * @param channel
      */
-    /*
-    @RabbitListener(queues = {"TestDirectQueue"})
-    public void oriProcess(Message message, Student content, AMQP.Channel channel) {
+//    @RabbitListener(queues = {"TestDirectQueue"})
+    public void oriProcess(Message message, Student content, Channel channel) {
         byte[] body = message.getBody();
         System.out.println(Arrays.toString(body));
 
@@ -54,6 +85,5 @@ public class DirectConsumerListener {
         System.out.println(messageProperties);
         System.out.println("接收到消息...内容："+message+"===>消息对象:"+content);
     }
-     */
 
 }

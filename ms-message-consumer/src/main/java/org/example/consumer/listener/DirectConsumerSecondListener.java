@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
  * 消费者2号：用于消费队列中消息
  *
  */
-@Component
-@RabbitListener(queues = {"TestDirectQueue"})       // 监听的队列列表
+//@Component
+//@RabbitListener(queues = {"TestDirectQueue"})       // 监听的队列列表
 public class DirectConsumerSecondListener {
 
     /**
@@ -19,9 +19,13 @@ public class DirectConsumerSecondListener {
      *
      * @param msg
      */
-    @RabbitHandler
-    public void process(Student msg) {
+//    @RabbitHandler
+    public void process(Student msg) throws InterruptedException {
+
+        Thread.sleep(3000);     // 模拟业务执行
         System.out.println("Direct Consumer - 2 get msg: " + msg);
     }
+
+
 
 }
