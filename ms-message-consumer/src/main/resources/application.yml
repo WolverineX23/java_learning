@@ -11,3 +11,10 @@ spring:
     username: guest
     password: guest
 #    virtual-host: "/"
+#    connection-timeout: 5000
+#    listener:
+#      simple:
+#        concurrency: 5              # 并发数量
+#        max-concurrency: 10         # 最大并发数量
+#        acknowledge-mode: manual    # 开启手动签收
+#        prefetch: 1                 # 限制一个线程每次只消费一个，并发数为5，则能一次接收5个

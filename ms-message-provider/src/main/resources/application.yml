@@ -11,3 +11,9 @@ spring:
     username: guest
     password: guest
 #    virtual-host: "/"
+#    connection-timeout: 5000
+#    publisher-confirm-type: correlated  # 消息成功确认 - 三种确认模式：correlated、none、simple
+#      #    publisher-confirms: true            # 弃用
+#    publisher-returns: true             # 消息失败确认：
+#    template:
+#      mandatory: true                   # 手动签收机制
