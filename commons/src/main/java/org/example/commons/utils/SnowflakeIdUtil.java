@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * SnowflakeIdWorker : 自定义 雪花ID 生成算法
+ * 分布式唯一ID
  *
  */
 
