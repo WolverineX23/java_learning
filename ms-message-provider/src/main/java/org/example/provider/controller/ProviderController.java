@@ -70,5 +70,4 @@ public class ProviderController {
         return ResponseEntity.ok("Succeed to send 3 msg!");
     }
 
-
 }

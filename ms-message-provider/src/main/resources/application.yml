@@ -12,8 +12,8 @@ spring:
     password: guest
 #    virtual-host: "/"
 #    connection-timeout: 5000
-#    publisher-confirm-type: correlated  # 消息成功确认 - 三种确认模式：correlated、none、simple
-#      #    publisher-confirms: true            # 弃用
-#    publisher-returns: true             # 消息失败确认：
-#    template:
-#      mandatory: true                   # 手动签收机制
+    # 开启 publisher-confirm，【异步】回调，定义 ConfirmCallback，MQ 返回结果时会回调这个 ConfirmCallback
+    publisher-confirm-type: correlated  # 两种模式，另一种是 simple: 【同步】等待confirm结果，直到超时（可能引起代码阻塞）
+    publisher-returns: true             # 开启回退模式,同样是基于callback机制，不过是定义 ReturnCallback
+    template:
+      mandatory: true                   # 定义当消息从交换机路由到队列失败时的策略。true：则调用ReturnCallback；false：则直接丢弃消息
