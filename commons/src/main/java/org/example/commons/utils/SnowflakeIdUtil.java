@@ -34,11 +34,11 @@ public class SnowflakeIdUtil {
     private long lastTimestamp = -1L;
 
     // 工作节点ID(0~31)
-    @Value("${java.workerId}")
+    @Value("${wx.workerId}")
     private long workerId;
 
     // 数据中心ID(0~31)
-    @Value("${java.datacenterId}")
+    @Value("${wx.datacenterId}")
     private long datacenterId;
     // 每个节点每毫秒内的序列号
     private AtomicLong sequence = new AtomicLong(0L);
