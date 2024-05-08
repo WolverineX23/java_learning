@@ -46,7 +46,7 @@ public class MqService {
         map.put("message", message);
         for (int i = 0; i < 3; i++) {
             long id = snowflakeIdUtil.nextId();
-            map.put("id", id);
+            map.put("id", id);                  // 消息中，额外添加一个 分布式唯一ID
             JSONObject entries = JSONUtil.parseObj(map);
             String redisKey = RedisKeyEnum.MQ_STATUS.getKey() + id;
             redisTemplate.opsForValue().set(redisKey, RabbitConsumeStatusEnum.CONSUME.getCode(), 60, TimeUnit.SECONDS);
