@@ -305,6 +305,7 @@ public class MinioUtils {
             // 获取对象信息
             StatObjectResponse stat = minioClient.statObject(StatObjectArgs.builder().bucket(bucketName).object(fileName).build());
             response.setContentType(stat.contentType());
+//            response.setContentType("application/force-download;charset=utf-8");// 设置强制下载而不是直接打开
             response.setHeader("Content-Disposition", "attachment;filename=" + URLEncoder.encode(fileName, "UTF-8"));
             //文件下载
             in = minioClient.getObject(
