@@ -17,3 +17,16 @@ spring:
     publisher-returns: true             # 开启回退模式,同样是基于callback机制，不过是定义 ReturnCallback
     template:
       mandatory: true                   # 定义当消息从交换机路由到队列失败时的策略。true：则调用ReturnCallback；false：则直接丢弃消息
+
+  # Redis
+  redis:
+    port: 6379
+    host: 127.0.0.1
+    timeout: 3000
+    #    password: ${REDIS_PASSWORD}
+    database: 0
+
+
+wx:
+  workerId: 0
+  datacenterId: 0

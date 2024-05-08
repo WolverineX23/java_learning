@@ -25,6 +25,7 @@
         <lombok-version>1.18.12</lombok-version>
         <fastjson2-version>2.0.23</fastjson2-version>
         <guava-version>30.0-jre</guava-version>
+        <hutool-version>5.7.16</hutool-version>
         <minio-version>8.2.2</minio-version>
         <es-client-version>7.6.2</es-client-version>
         <!--<spring-rabbit-version>3.1.4</spring-rabbit-version>-->
@@ -63,6 +64,12 @@
             </dependency>
 
             <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool-version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>io.minio</groupId>
                 <artifactId>minio</artifactId>
                 <version>${minio-version}</version>
@@ -89,6 +96,12 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-amqp</artifactId>
+                <version>${spring-boot-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
                 <version>${spring-boot-version}</version>
             </dependency>
 
