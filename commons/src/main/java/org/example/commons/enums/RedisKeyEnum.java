@@ -5,7 +5,8 @@ import lombok.Getter;
 @Getter
 public enum RedisKeyEnum {
 
-    MQ_STATUS("mq_status:", "消息队列状态");
+    MQ_STATUS("mq_status:", "消息队列状态"),
+    RATE_LIMIT("rate_limit:", "接口限流");
 
 
     private String key;
