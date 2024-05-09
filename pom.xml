@@ -29,6 +29,7 @@
         <minio-version>8.2.2</minio-version>
         <es-client-version>7.6.2</es-client-version>
         <!--<spring-rabbit-version>3.1.4</spring-rabbit-version>-->
+        <redisson-verison>3.13.6</redisson-verison>
     </properties>
 
     <dependencyManagement>
@@ -103,6 +104,12 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-redis</artifactId>
                 <version>${spring-boot-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson-verison}</version>
             </dependency>
 
         </dependencies>
