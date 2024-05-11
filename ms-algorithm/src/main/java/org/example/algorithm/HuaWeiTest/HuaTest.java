@@ -2,6 +2,12 @@ package org.example.algorithm.HuaWeiTest;
 
 import java.util.*;
 
+/**
+ * 当时考试时代码：踢足球排序
+ * getFluentCount方法中 少了一行代码就对了
+ * 傻波依用 TreeSort 做了，花了好多时间
+ *
+ */
 public class HuaTest {
 
     public static void main(String[] args) {
@@ -114,6 +120,7 @@ public class HuaTest {
                 tmp = 0;
             }
         }
+        count = Math.max(count, tmp);   // 少了这行代码
 
         return count;
     }
