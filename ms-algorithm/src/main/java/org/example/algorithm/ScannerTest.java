@@ -92,8 +92,24 @@ public class ScannerTest {
         in.close();
     }
 
-    // 输入转化为数组
+    // 输入 int[]
     static void getArrays() {
+        Scanner in = new Scanner(System.in);
+
+        int n = in.nextInt();
+
+        int[] nums = new int[n];
+        for (int i = 0; i < n; i++) {
+            nums[i] = in.nextInt();
+        }
+
+        System.out.println(Arrays.toString(nums));
+
+        in.close();
+    }
+
+    // 输入转化为数组 String 转 int[]
+    static void getArrays2() {
 
         Scanner in = new Scanner(System.in);
 
@@ -122,6 +138,7 @@ public class ScannerTest {
     public static void main(String[] args) {
 
         List<Integer> nums = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+//        int[] nums2 = new int[]{1, 2, 3, 4, 5};
 
         list.add(new ArrayList<>(nums));
 
@@ -133,4 +150,5 @@ public class ScannerTest {
 //        multiHasNextTest();
 //        getArrays();
     }
+
 }
