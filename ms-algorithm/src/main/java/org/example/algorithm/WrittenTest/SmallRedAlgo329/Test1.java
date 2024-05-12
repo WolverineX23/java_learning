@@ -1,4 +1,4 @@
-package org.example.algorithm.SmallRedAlgo329;
+package org.example.algorithm.WrittenTest.SmallRedAlgo329;
 
 import java.util.Scanner;
 

@@ -28,7 +28,6 @@ public class ReverseStringWord {
 
         // 正则匹配连续的空白字符作为分隔符分割
         List<String> wordList = Arrays.asList(s.split("\\s+"));     // \\s 表示空白字符的特殊符号； + 表示匹配全面的元素一次或多次
-
         // 反转集合
         Collections.reverse(wordList);
 

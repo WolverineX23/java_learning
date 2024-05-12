@@ -1,4 +1,4 @@
-package org.example.algorithm.HaiKangAlgo;
+package org.example.algorithm.WrittenTest.HaiKangAlgo;
 
 /**
  * 模板方法模式 - 机房巡检

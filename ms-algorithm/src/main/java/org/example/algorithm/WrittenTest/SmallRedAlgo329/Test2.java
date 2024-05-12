@@ -1,9 +1,21 @@
-package org.example.algorithm.SmallRedAlgo;
+package org.example.algorithm.WrittenTest.SmallRedAlgo329;
 
 import java.util.Scanner;
 
-// 82%
-public class SecondAlgo {
+/*
+    你有n个小红书账号，每个账号粉丝为a_i，你需要创建一个粉丝为k的新账号，你可以通过老账号发推文来宣传新账号，宣传的方式有两种。
+    第一种是浅度宣传，浅度宣传可以为新账号增加a_i/2（向下取整）粉丝。
+    第二种是重度宣传，重度宣传可以为新账号增加a_i粉丝。
+    其中重度宣传你最多使用一次。求最少需要的账号个数，若无法实现则输出 -1
+
+    实例
+    输入：5 8
+         1 2 3 4 10
+    输出：2（用第三个账号重度宣传和第五个账号浅度宣传）
+
+    类 01背包问题
+ */
+public class Test2 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

@@ -1,4 +1,4 @@
-package org.example.algorithm.AnZongTest;
+package org.example.algorithm.WrittenTest.AnZongTest;
 
 import java.util.Scanner;
 

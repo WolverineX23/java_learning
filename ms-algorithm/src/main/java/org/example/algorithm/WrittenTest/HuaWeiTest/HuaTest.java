@@ -1,4 +1,4 @@
-package org.example.algorithm.HuaWeiTest;
+package org.example.algorithm.WrittenTest.HuaWeiTest;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package org.example.algorithm.TikTokAlgo;
+package org.example.algorithm.WrittenTest.TikTokAlgo;
 
 /**
  * 异或操作
