@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ms-tech-hotchpotch" />
         <module name="ms-algorithm" />
+        <module name="ms-message-consumer" />
+        <module name="test" />
+        <module name="ms-tech-hotchpotch" />
         <module name="ms-java-base" />
         <module name="ms-message-provider" />
-        <module name="ms-message-consumer" />
         <module name="commons" />
       </profile>
     </annotationProcessing>
