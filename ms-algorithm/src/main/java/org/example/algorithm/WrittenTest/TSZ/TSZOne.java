@@ -3,7 +3,9 @@ package org.example.algorithm.WrittenTest.TSZ;
 import java.util.Scanner;
 
 /**
- * 字符翻转
+ * 字符翻转：翻转一次，获取最小翻转二进制字符
+ *
+ * 示例： 11001 翻转 [1, 4] 变为 00111 最小
  */
 public class TSZOne {
     // 将字符串 s 的子区间 [l, r] 翻转

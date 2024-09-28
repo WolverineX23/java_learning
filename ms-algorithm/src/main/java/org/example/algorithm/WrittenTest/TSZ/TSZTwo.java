@@ -3,7 +3,24 @@ package org.example.algorithm.WrittenTest.TSZ;
 import java.util.Scanner;
 
 /**
- * 360 编程题2：
+ * 360 编程题2【修复方程】：原方程本身成立或添加一个 0-9 的数，使得表达式成立
+ *
+ * input：
+ * 6
+ * 16=1+2*3
+ * 7*8*9=54
+ * 1+1=1+22
+ * 4*6=22+2
+ * 15+7=1+2
+ * 11+1=1+5
+ *
+ * output:
+ * Yes
+ * Yes
+ * No
+ * Yes
+ * Yes
+ * No
  */
 public class TSZTwo {
     // 计算表达式的值（不含括号运算，按从左到右顺序）
