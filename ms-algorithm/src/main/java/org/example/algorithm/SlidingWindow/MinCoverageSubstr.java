@@ -1,4 +1,4 @@
-package org.example.algorithm.StringAlgo;
+package org.example.algorithm.SlidingWindow;
 
 import java.util.HashMap;
 import java.util.Map;
