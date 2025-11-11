@@ -1,29 +1,23 @@
 package org.example.algorithm.backtracking;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
- * 46. 全排列  -  无重复的
+ * 47 全排列Ⅱ  -  有重复的
  */
-public class AllUniquePermutation {
-
-    public List<List<Integer>> permute(int[] nums) {
+public class NoUniquePermutation {
+    public List<List<Integer>> permuteUnique(int[] nums) {
 
         List<List<Integer>> res = new ArrayList<>();
         int len = nums.length;
-
         if (len == 0) {
             return res;
         }
 
         boolean[] used = new boolean[len];
-        Arrays.fill(used, false);       // 其实默认就是 false
-
         List<Integer> path = new ArrayList<>();
         dfs(nums, len, 0, path, res, used);
-
         return res;
     }
 
@@ -33,10 +27,13 @@ public class AllUniquePermutation {
             return;
         }
 
+        List<Integer> usedList = new ArrayList<>();
         for (int i = 0; i < len; i++) {
-            if (!used[i]) {
-                path.add(nums[i]);
+            int num = nums[i];
+            if (!used[i] && !usedList.contains(num)) {
+                path.add(num);
                 used[i] = true;
+                usedList.add(num);
 
                 dfs(nums, len, depth + 1, path, res, used);
                 used[i] = false;
